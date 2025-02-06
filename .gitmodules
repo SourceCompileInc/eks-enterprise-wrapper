@@ -1,9 +1,14 @@
 [submodule "modules/terraform-aws-eks"]
-	path = modules/terraform-aws-eks
-	url = https://github.com/terraform-aws-modules/terraform-aws-eks.git
+    path = modules/terraform-aws-eks
+    url = https://github.com/terraform-aws-modules/terraform-aws-eks.git
+    branch = v20.33.1
+
 [submodule "modules/terraform-aws-eks-ebs-csi-driver"]
-	path = modules/terraform-aws-eks-ebs-csi-driver
-	url = https://github.com/lablabs/terraform-aws-eks-ebs-csi-driver.git
+    path = modules/terraform-aws-eks-ebs-csi-driver
+    url = https://github.com/lablabs/terraform-aws-eks-ebs-csi-driver.git
+    branch = v2.10.1
+
 [submodule "modules/terraform-aws-eks-efs-csi-driver"]
-	path = modules/terraform-aws-eks-efs-csi-driver
-	url = https://github.com/lablabs/terraform-aws-eks-efs-csi-driver.git
+    path = modules/terraform-aws-eks-efs-csi-driver
+    url = https://github.com/lablabs/terraform-aws-eks-efs-csi-driver.git
+    branch = v2.2.7

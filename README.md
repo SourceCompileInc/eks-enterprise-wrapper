@@ -21,6 +21,46 @@ This Terraform module creates a production-ready Amazon EKS cluster with managed
 - An existing VPC with private and public subnets
 - AWS CLI configured with appropriate credentials
 
+## Initial Setup
+
+### Initializing Submodules
+
+This module uses Git submodules to manage its dependencies. After cloning the repository, you need to initialize and update the submodules:
+
+```bash
+# If you haven't cloned the repository yet
+git clone <repository-url>
+cd eks-enterprise-wrapper
+
+# Initialize and update submodules
+git submodule init
+git submodule update
+
+# Alternatively, you can clone and initialize submodules in one command
+git clone --recurse-submodules <repository-url>
+```
+
+The module uses a `.gitmodules` file to track the submodules and their versions:
+
+```ini
+[submodule "modules/terraform-aws-eks"]
+    path = modules/terraform-aws-eks
+    url = https://github.com/terraform-aws-modules/terraform-aws-eks.git
+    branch = v20.33.1
+
+[submodule "modules/terraform-aws-eks-ebs-csi-driver"]
+    path = modules/terraform-aws-eks-ebs-csi-driver
+    url = https://github.com/lablabs/terraform-aws-eks-ebs-csi-driver.git
+    branch = v2.10.1
+
+[submodule "modules/terraform-aws-eks-efs-csi-driver"]
+    path = modules/terraform-aws-eks-efs-csi-driver
+    url = https://github.com/lablabs/terraform-aws-eks-efs-csi-driver.git
+    branch = v2.2.7
+```
+
+This ensures that specific versions of the modules are used, providing consistency and stability.
+
 ## Module Versions
 
 This module uses the following local module versions:
@@ -246,5 +286,3 @@ For a complete list of inputs, see [variables.tf](./variables.tf).
 | cloudwatch_log_group_arn | ARN of cloudwatch log group created |
 
 For a complete list of outputs, see [outputs.tf](./outputs.tf).
-
-
