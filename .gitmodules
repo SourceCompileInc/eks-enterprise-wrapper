@@ -1,0 +1,9 @@
+[submodule "modules/terraform-aws-eks"]
+	path = modules/terraform-aws-eks
+	url = https://github.com/terraform-aws-modules/terraform-aws-eks.git
+[submodule "modules/terraform-aws-eks-ebs-csi-driver"]
+	path = modules/terraform-aws-eks-ebs-csi-driver
+	url = https://github.com/lablabs/terraform-aws-eks-ebs-csi-driver.git
+[submodule "modules/terraform-aws-eks-efs-csi-driver"]
+	path = modules/terraform-aws-eks-efs-csi-driver
+	url = https://github.com/lablabs/terraform-aws-eks-efs-csi-driver.git
